@@ -1,0 +1,15 @@
+[Unit]
+Description=ThePixStock Admin Panel
+After=network.target
+
+[Service]
+Type=notify
+User=thepixstock
+Group=thepixstock
+Restart=always
+RestartSec=1
+WorkingDirectory=/home/frontend/thepixstock-admin/publish
+ExecStart=/home/frontend/thepixstock-admin/publish/ThePixStock.AdminPanel
+
+[Install]
+WantedBy=multi-user.target
